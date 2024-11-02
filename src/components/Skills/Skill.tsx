@@ -17,7 +17,7 @@ export default function Skill({ title, content, second_content, icon_name, link,
                 <span>
                     <i className={icon_name}></i>
                 </span>
-                <h4>Architecture Design for Distributed Systems</h4>
+                <h4>{title}</h4>
                 <p>
                     {content}
                 </p>
