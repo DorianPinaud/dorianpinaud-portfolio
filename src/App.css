@@ -145,10 +145,14 @@ section .header {
     gap: 1.5rem;
 }
 
+
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
-    padding: 1rem;
+    padding: 1rem 1rem 3rem 1rem;
     max-width: 650px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.75);
     border-radius: 15px;
@@ -162,8 +166,11 @@ section .header {
     box-shadow: none;
 }
 
-.card span {
+.card div span {
     display: inline-block;
+}
+
+.card span {
     background-color: var(--md-sys-color-tertiary);
     padding: 2px 9px;
     margin-bottom: 1rem;
@@ -181,10 +188,12 @@ section .header {
 
 .card p {
     color: var(--md-sys-color-on-surface);
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
 .card a {
+    font-weight: 600;
     color: var(--md-sys-color-on-surface);
     transition: all 0.3s ease;
 }
