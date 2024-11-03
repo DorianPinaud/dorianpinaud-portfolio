@@ -11,7 +11,6 @@ export default function Header() {
                     Hi, I'm Dorian - Code crafter since 2016,
                     I'm a collaboratively driven developer,
                     eager to continousely learn.
-                    I bring a well-rounded tech skill set to every project.
                     <ul>
                         <li>
                             <p>
@@ -38,7 +37,7 @@ export default function Header() {
                                 <i className="fa-solid fa-list-check"></i>
                                 I am a well-rounded developer with experience in software
                                 design and development. I have managed application costs during the design process
-                                and am proficient in both Object-Oriented Programming (OOP) and Railway Oriented Programming (ROP). With a background in various languages and frameworks, I bring expertise in both front-end and back-end development.
+                                and am proficient in both Object-Oriented Programming (OOP) and Railway Oriented Programming (ROP). With a background in various languages and frameworks, I bring insight in both front-end and back-end development.
                             </p>
                         </li>
                     </ul>

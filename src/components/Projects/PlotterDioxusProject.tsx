@@ -19,7 +19,7 @@ export default function PlotterDioxusProject() {
                     Integration of a plot library into a multi-platform framework
                 </p>
             </div>
-            <a className='btn'>Go Check</a>
+            <a className='btn' href='https://github.com/DorianPinaud/plotters-dioxus'>Go Check</a>
         </div>
     )
 }
