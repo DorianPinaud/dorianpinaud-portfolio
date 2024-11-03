@@ -4,22 +4,22 @@ export default function PlotterDioxusProject() {
     return (
         <div className="card">
             <div className="content">
-                <h4>AGE</h4>
-                <h3>dioxus-plotter</h3>
+                <h4>plotters-dioxus</h4>
+                <h3>Integrated plot library into a cross-platform framework</h3>
                 <p>
                     <i className="fa-regular fa-square-check"></i>
                     A Personal rust project
                 </p>
                 <p>
                     <i className="fa-regular fa-square-check"></i>
-                    Open-source contribution to Dioxus & Plotter ecosystem
+                    Open-source contribution to <a href="https://github.com/DioxusLabs/dioxus">Dioxus</a> and <a href='https://github.com/plotters-rs/plotters'>Plotters</a> ecosystem
                 </p>
                 <p>
                     <i className="fa-regular fa-square-check"></i>
-                    Integrate Plotter-rs into Dioxus Framework
+                    Integration of a plot library into a multi-platform framework
                 </p>
             </div>
-            <button className='btn'>Go Check</button>
+            <a className='btn'>Go Check</a>
         </div>
     )
 }

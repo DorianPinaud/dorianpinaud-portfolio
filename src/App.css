@@ -114,6 +114,8 @@ nav {
 }
 
 .btn {
+    display: flex;
+    justify-content: center;
     padding: 1rem 2rem;
     font-size: 1.2rem;
     color: var(--md-sys-color-on-primary);
