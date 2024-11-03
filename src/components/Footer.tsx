@@ -27,7 +27,6 @@ export default function Footer() {
             </div>
             <div className="column">
                 <h4>About Me</h4>
-                <a href="Dorian_Pinaud_EN.pdf">CV (en)</a>
                 <a href="Dorian_Pinaud_FR.pdf">CV (fr)</a>
             </div>
             <div className="column">
