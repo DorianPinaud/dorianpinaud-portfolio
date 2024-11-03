@@ -6,7 +6,7 @@ import ColorNoKamiProject from './Projects/ColorNoKamiProject'
 export default function ProjectList() {
     return (
         <section id="projects" className="container">
-            <h2 className="header">MY PROJECTS</h2>
+            <h2 className="header">PROJECTS</h2>
             <div className="projects">
                 <AGEProject />
                 <PlotterDioxusProject />

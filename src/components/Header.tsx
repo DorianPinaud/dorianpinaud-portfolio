@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <header className="container">
             <div className="content">
-                <h4>Fortunately, not all dodos have gone extinct <img src="images/logo2.png" />🔥🔥🔥</h4>
+                <h4>Fortunately, not all dodos have gone extinct <img src="images/logo2.png" alt="dodo logo" /></h4>
                 <h1><span>Dorian</span>, Software Engineer</h1>
                 <p>
                     Hi, I'm Dorian - Code crafter since 2016,

@@ -7,7 +7,7 @@ import ProblemSolvingSkill from './Skills/ProblemSolvingSkill'
 export default function SkillList() {
     return (
         <section id="skills" className="container">
-            <h2 className="header">MY SKILLS</h2>
+            <h2 className="header">SKILLS</h2>
             <div className="features">
                 <ProgrammingSkill />
                 <MachineLearningSkill />
