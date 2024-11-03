@@ -1,6 +1,13 @@
 import React from 'react'
 
 export default function NavBar() {
+
+    const scrollToView = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, elementId: string) => {
+        e.preventDefault()
+        const element = document.getElementById(elementId);
+        element?.scrollIntoView({ behavior: "smooth" })
+    }
+
     return (
         <nav>
             <a href="#" >
@@ -9,12 +16,11 @@ export default function NavBar() {
                 </div>
             </a>
             <ul className="nav-links">
-                <li className='link'><a href="3">Home</a></li>
-                <li className='link'><a href="3">Skills</a></li>
-                <li className='link'><a href="3">Projects</a></li>
-                <li className='link'><a href="3">About</a></li>
+                <li className='link'><a onClick={(e) => scrollToView(e, "experiences")}>Experiences</a></li>
+                <li className='link'><a onClick={(e) => scrollToView(e, "skills")}>Skills</a></li>
+                <li className='link'><a onClick={(e) => scrollToView(e, "projects")}>Projects</a></li>
             </ul>
-            <button className='btn'>Hire Me</button>
+            <a className='btn' href='mailto:dorian.pinaud@gmail.com'>Hire Me</a>
         </nav>
     )
 }
