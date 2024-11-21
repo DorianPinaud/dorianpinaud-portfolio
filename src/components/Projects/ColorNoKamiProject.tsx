@@ -14,8 +14,8 @@ export default function ColorNoKamiProject() {
                     <i className="fa-regular fa-square-check"></i>
                     U-Net Powered by MangaDex API
                 </p>
-                <p><em>Work in progress</em></p>
             </div>
+            <a className='btn' href='https://github.com/DorianPinaud/colorNoKami'>Go Check</a>
         </div>
     )
 }
