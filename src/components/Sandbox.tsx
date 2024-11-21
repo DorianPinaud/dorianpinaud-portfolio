@@ -164,6 +164,21 @@ export default function Sandbox({ nbrGridCells, pixelByCell, circleArea }: Props
                         newState[j + 1][i] = grid[j][i].value;
                         newState[j][i] = 0;
                     }
+                    else if (j < (nbrGridCells - 1) &&
+                        grid[j][i].value > 0 &&
+                        grid[j + 1][i].value > 0 &&
+                        ((i + 1) < nbrGridCells && (grid[j + 1][i + 1].value == 0) ||
+                            ((i - 1) >= 0 && grid[j + 1][i - 1].value == 0))) {
+                        const choice = (Math.floor(Math.random() * 2) * 2) - 1;
+                        if (i + choice >= 0 && i + choice < nbrGridCells && grid[j + 1][i + choice].value == 0) {
+                            newState[j + 1][i + choice] = grid[j][i].value;
+                            newState[j][i] = 0;
+                        }
+                        else if (i - choice >= 0 && i - choice < nbrGridCells && grid[j + 1][i - choice].value == 0) {
+                            newState[j + 1][i - choice] = grid[j][i].value;
+                            newState[j][i] = 0;
+                        }
+                    }
                     else if (grid[j][i].value > 0) {
                         newState[j][i] = grid[j][i].value
                     }
