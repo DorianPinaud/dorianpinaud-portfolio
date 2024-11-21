@@ -163,8 +163,8 @@ export default function Sandbox({ nbrGridCells, pixelByCell }: Props) {
 
     return (
         <div className="sandbox">
-            <h1>Mini Game...</h1>
-            <h3>Falling-Sand (click to make fall the sand)</h3>
+            <h1>My Mini Project...</h1>
+            <h3>Falling-Sand (Click to make the sand fall)</h3>
             <div ref={containerRef} className="sandbox-area" style={{ width: `${nbrGridCells * pixelByCell + 20}px`, height: `${nbrGridCells * pixelByCell + 20}px` }} />
         </div>
     );
