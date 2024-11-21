@@ -2,11 +2,12 @@ import React, { MouseEvent, useCallback, useEffect, useMemo, useRef, useState } 
 import Konva from 'konva';
 
 interface Props {
-    nbrGridCells: 100,
-    pixelByCell: 5,
+    nbrGridCells: number,
+    pixelByCell: number,
+    circleArea: number
 }
 
-export default function Sandbox({ nbrGridCells, pixelByCell }: Props) {
+export default function Sandbox({ nbrGridCells, pixelByCell, circleArea }: Props) {
 
     let isPainting: boolean = false
 
@@ -64,9 +65,9 @@ export default function Sandbox({ nbrGridCells, pixelByCell }: Props) {
         return [...Array(nbrGridCells)].fill(null).map((_, i) => [...Array(nbrGridCells).fill(0)])
     }
 
-    const paintCircle = (grid: GridCell[][], { x, y }: Pos, size: number = 4) => {
-        for (var j of Array(size).keys()) {
-            for (var i of Array(size).keys()) {
+    const paintCircle = (grid: GridCell[][], { x, y }: Pos) => {
+        for (var j of Array(circleArea).keys()) {
+            for (var i of Array(circleArea).keys()) {
                 const r = 0.785398;
                 const a: number = Math.floor(Math.sin(r) * (i) + Math.cos(r) * (j)) + y;
                 const b: number = Math.floor(Math.cos(r) * (i) - Math.sin(r) * (j)) + x;
@@ -103,19 +104,41 @@ export default function Sandbox({ nbrGridCells, pixelByCell }: Props) {
         bkLayer.add(background);
 
         background.on("mousedown", function (e) {
-            const { offsetX, offsetY } = e.evt;
-            paintCircle(grid, pos2Index({ x: offsetX, y: offsetY }))
-            isPainting = true
+            const position = e.target.getStage()?.getRelativePointerPosition()
+            if (position) {
+                paintCircle(grid, pos2Index(position))
+                isPainting = true
+            }
         });
+
+        background.on("touchstart", function (e) {
+            const position = e.target.getStage()?.getRelativePointerPosition()
+            if (position) {
+                paintCircle(grid, pos2Index(position))
+                isPainting = true
+            }
+        });
+
 
         background.on("mouseup", function (e) {
             isPainting = false;
         });
 
+        background.on("touchend", function (e) {
+            isPainting = false;
+        });
+
         background.on("mousemove", function (e) {
-            if (isPainting) {
-                const { offsetX, offsetY } = e.evt;
-                paintCircle(grid, pos2Index({ x: offsetX, y: offsetY }));
+            const position = e.target.getStage()?.getRelativePointerPosition()
+            if (isPainting && position) {
+                paintCircle(grid, pos2Index(position));
+            }
+        });
+
+        background.on("touchmove", function (e) {
+            const position = e.target.getStage()?.getRelativePointerPosition()
+            if (isPainting && position) {
+                paintCircle(grid, pos2Index(position));
             }
         });
 

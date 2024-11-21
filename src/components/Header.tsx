@@ -46,7 +46,7 @@ export default function Header() {
                 </p>
             </div>
             <div className="image">
-                <Sandbox nbrGridCells={100} pixelByCell={5} />
+                <Sandbox nbrGridCells={130} pixelByCell={3} circleArea={4} />
             </div>
         </header>
     )
