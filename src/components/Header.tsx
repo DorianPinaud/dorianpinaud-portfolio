@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderImage from "./HeaderImage"
+import Sandbox from './Sandbox'
 
 export default function Header() {
     return (
@@ -45,7 +46,7 @@ export default function Header() {
                 </p>
             </div>
             <div className="image">
-                <HeaderImage />
+                <Sandbox nbrGridCells={100} pixelByCell={5} />
             </div>
         </header>
     )

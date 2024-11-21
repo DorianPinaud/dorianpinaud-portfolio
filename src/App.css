@@ -98,6 +98,26 @@ nav {
     font-size: 1.2rem;
 }
 
+.sandbox h1 {
+    font-family: "Bangers";
+    text-align: center;
+    margin: 1rem;
+}
+
+.sandbox h3 {
+    font-family: "Bangers";
+    text-align: center;
+    margin: 0.7rem;
+}
+
+.sandbox .sandbox-area {
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: crosshair;
+    padding: 10px;
+    background-color: var(--md-sys-color-inverse-surface);
+}
+
 .link a::after {
     content: "";
     position: absolute;
@@ -231,7 +251,6 @@ section .header {
     color: var(--md-sys-color-on-tertiary-fixed);
 }
 
-
 .projects .card h4 {
     font-size: 1.6rem;
 }
@@ -341,6 +360,10 @@ header .content p ul i {
 }
 
 header .image {
+    position: relative;
+}
+
+header .image canvas {
     position: relative;
 }
 
